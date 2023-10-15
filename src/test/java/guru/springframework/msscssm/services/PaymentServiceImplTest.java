@@ -47,11 +47,6 @@ class PaymentServiceImplTest {
 
         System.out.println(preAuthedPayment);
 
-
-        StateMachine<PaymentState, PaymentEvent> authorizedPayment = paymentService.authorizePayment(savedPayment.getId());
-        System.out.println("should be AUTH");
-        System.out.println(paymentRepository.getOne(savedPayment.getId()));
-        System.out.println(authorizedPayment.getState().getId());
     }
     @Transactional
     @Test
